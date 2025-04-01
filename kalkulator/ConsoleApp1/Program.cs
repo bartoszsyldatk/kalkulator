@@ -1,24 +1,24 @@
-﻿Console.WriteLine("Wybierz działanie:");
+﻿﻿Console.WriteLine("Wybierz działanie:");
 Console.WriteLine("1. Dodawanie");
 Console.WriteLine("2. Odejmowanie");
 Console.WriteLine("3. Mnożenie");
 Console.WriteLine("4. Dzielenie");
 //wybranie dzialania
-int odp;
-while(!int.TryParse(Console.ReadLine(), out odp) && odp > 0 && odp < 5){
+double odp;
+while(!double.TryParse(Console.ReadLine(), out odp) && odp > 0 && odp < 5){
     Console.WriteLine("Podaj poprawną liczbę");
 }
 
 Console.WriteLine();
 //wpisanie liczb do obliczenia
-int a, b;
+double a, b;
 Console.Write("Podaj pierwszą liczbę: ");
-while (!int.TryParse(Console.ReadLine(), out a)) {
+while (!double.TryParse(Console.ReadLine(), out a)) {
     Console.Write("Podaj poprawną liczbę: ");
 }
 Console.WriteLine();
 Console.Write("Podaj drugą liczbę: ");
-while (!int.TryParse(Console.ReadLine(), out b)) {
+while (!double.TryParse(Console.ReadLine(), out b)) {
     Console.Write("Podaj poprawną liczbę: ");
 }
 
@@ -39,18 +39,18 @@ switch (odp){
         break;
 }
 
-void suma(int a, int b){
+void suma(double a, double b){
     Console.WriteLine($"Suma wynosi {a + b}.");
 }
 
-void roznica(int a, int b){
+void roznica(double a, double b){
     Console.WriteLine($"Suma wynosi {a - b}.");
 }
 
-void iloczyn(int a, int b){
+void iloczyn(double a, double b){
     Console.WriteLine($"Suma wynosi {a * b}.");
 }
 
-void iloraz(int a, int b){
+void iloraz(double a, double b){
     Console.WriteLine($"Suma wynosi {a / b}.");
 }
